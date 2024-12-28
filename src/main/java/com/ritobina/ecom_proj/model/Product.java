@@ -17,15 +17,19 @@ public class Product {
     private int id;
     private String name;
     private String brand;
-    private String descOfProduct;
+    private String description;
     private BigDecimal price;
     private String category;
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-BR", timezone = "America/Sao_Paulo")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-BR", timezone = "America/Sao_Paulo")
     private Date releaseDate;
-    private boolean available;
-    private int quantity;
+    private boolean productAvailable;
+    private int stockQuantity;
 
+    private String imageName;
+    private String imageType;
+    @Lob //Annotation specifying Large Object
+    private byte[] imageData;
 
 
 }
